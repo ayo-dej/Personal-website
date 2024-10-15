@@ -7,51 +7,137 @@
     <link href="./homepage_style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <style>
-        body{
-            height: 100vh;
-            padding: 0;
+        *{
             margin: 0;
+            padding: 0;
         }
 
-        .container {
-            display: inline-flex;
-            flex-direction: column;
+        body{
             background-color: black;
             color:rgba(239, 228, 169, 0.461);
         }
+        .container{
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-        a:link {
+        .header-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .header-container > img{
+            border-radius: 50%;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .intro{
+            width: 100%;
+            max-width: 650px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            align-self: flex-start ;
+        }
+
+        .about-me{
+            border: 3px rgba(239, 228, 169, 0.461) solid;
+            width: 100%;
+            max-width: 800px;
+            text-align: justify;
+        }
+
+          a:link {
             color: rgba(239, 228, 169, 0.461);
         }
 
-        img{
-            border-radius: 100%;
-            float: left;
+        .skills-container{
+            width: 35%;
+            max-width: 500px;
+            margin: 20px;
+            align-self: flex-start;
+            text-align: justify;
+            border: 3px rgba(239, 228, 169, 0.461) solid;
         }
 
-        .introduction{
-            float: left;
-    
+        .skills-container ul{
+            list-style-type: none;
         }
+
+        .experience-container{
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+            text-align: justify;
+            border: 3px rgba(239, 228, 169, 0.461) solid;
+        }
+
+        .experience-container ul{
+            list-style-type: none;
+        }
+
+        #experience{
+            font-weight:bold;
+        }
+
+        .projects-container{
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+            text-align:justify;
+            border: 3px rgba(239, 228, 169, 0.461) solid;
+        }
+
+        .projects-container ul{
+            list-style-type: none;
+        }
+
+        .education-container{
+            width:70%;
+            align-self: center;
+            text-align: center;
+            border: 3px rgba(239, 228, 169, 0.461) solid;
+        }
+
+        .education-container ul{
+            list-style-type: none;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="introduction">
-                <img src="./Funmbi.JPG" height="175"/>
-                <h1 id="text">Oluwafunmbi Akinsanya</h1>
-                <p id="info">
-                    Phone: 443-929-0337<br/>
-                    Email:<a href="akinsanyafunmbi@gmail.com"> akinsanyafunmbi@gmail.com</a>
+        <div class="header-container">
+            <img src="./Funmbi.JPG" height="175"/>
+            <h1 id="text">Oluwafunmbi Akinsanya</h1>
+            <p id="info">
+                Phone: 443-929-0337<br/>
+                Email:<a href="akinsanyafunmbi@gmail.com"> akinsanyafunmbi@gmail.com</a>
+            </p>
+        </div>
+            <div class="intro">
+                <p> Hi, like the title says my name is Oluwafunmbi Akinsnaya, although you can just call me Funmbi, 
+                    welcome to my website. The goal of this is to show my experience using HTML and CSS, so all this was 
+                    built using the aforementioned technique, but for the CSS, I primarily focused on using just flexbox.
+                     Thanks for stopping by, feel free to mess around lol.
                 </p>
             </div>
-        </div>
             <div class="about-me">
-                <h2>Summary</h2>
+                <h2>About me</h2>
                 <hr/>
                 <p id="info">
-                    A highly analytical, detail oriented and technology-driven Computer Engineering graduate
+                    I am a highly analytical, detail oriented and technology-driven Computer Engineering graduate
                     that combines computer science knowledge with that of electrical engineering to build new 
                     computers and tackle problems with existing computer systems. I also have a strong in-depth
                     knowledge of design, analytics, algorithms, analysis tools, and object-oriented modeling. 
@@ -61,7 +147,7 @@
                     Certified Cloud Practitioner Certificate.
                 </p>
             </div>
-        <div class="my-skills">
+        <div class="skills-container">
             <div>
                 <h2>Certifications and skills</h2>
                 <hr/>
@@ -77,7 +163,7 @@
                 </ul>
             </div>
         </div>
-        <div class="my-experience">
+        <div class="experience-container">
             <div>
                 <h2>Professional Experience</h2>
                 <hr/>
@@ -157,7 +243,7 @@
                 </ul>
             </div>
             <div>
-                <p>
+                <p id="experience">
                     Eastern Nazarene College<br/>
                     August 2022 - April 2023<br/>
                     Teaching Assistant - Circuit Theory & Intro to C/C++<br/>
@@ -184,7 +270,7 @@
             </div>
         </div>
         <br/>
-        <div class="projects">
+        <div class="projects-container">
             <div>
                 <div>
                     <h2>Research and Design Project</h2>
@@ -258,7 +344,7 @@
             </div>
         </div>
         <br/>
-        <div class="education">
+        <div class="education-container">
             <h2>Education & Certification</h2>
             <hr/>
             <ul>
