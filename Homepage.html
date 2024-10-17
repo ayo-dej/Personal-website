@@ -32,6 +32,8 @@
             align-items: center;
             background-color: #001F54;
             color: #FFFFFF;
+            flex-shrink: 1;
+            flex-grow: 1;
         }
         
         .introduction  img{
@@ -39,6 +41,8 @@
             float: left;
             margin-top: 10px;
             padding-right: 10px;
+            max-height: 175px; /* Controls image size to prevent overflow */
+            width: auto;
         }
 
         .about-me{
@@ -87,8 +91,8 @@
             flex-wrap: wrap;
             text-align: justify;
             padding: 15px;
-            background-color: #DDE7F0; /* Light Gray */
-            color: #001F54; /* Navy Blue text */
+            background-color: #DDE7F0; 
+            color: #001F54;
         }
 
         .education{
@@ -102,21 +106,36 @@
             align-items: center;
             text-align: justify;
             padding: 10px;
-            background-color: #001F54; /* Sky Blue */
-            color: #FFFFFF; /* White text for readability */
+            background-color: #001F54; 
+            color: #FFFFFF; 
         }
 
+        @media (min-width: 1000px) {
+            .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 10% 9% auto auto;
+            gap: 1.5rem;
+        }
+            .introduction img{
+                height: 100px;
+            }
+
+            .introduction h1, .info{
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="introduction">
-                <img src="./Funmbi.JPG" height="175"/>
+                <img src="./Funmbi.JPG" alt="Oluwafunmbi Akinsanya's Profile Picture" height="175"/>
                 <h1 id="text">Oluwafunmbi Akinsanya</h1>
                 <p id="info">
                     Phone: 443-929-0337
-                    Email:<a href="akinsanyafunmbi@gmail.com">akinsanyafunmbi@gmail.com</a>
+                    Email:<a href="mailto:akinsanyafunmbi@gmail.com">akinsanyafunmbi@gmail.com</a>
                 </p>
             </div>
         </div>
@@ -155,9 +174,9 @@
                 <h2>Professional Experience</h2>
                 <hr/>
                 <p id="experience">
-                    Cyberfleet Integrated Limited<br/>
-                    May 2023 to June 2024<br/>
-                    Software Engineering Intern (Remote) <br/>
+                    <h3>Cyberfleet Integrated Limited<br/></h3>
+                    <h3>May 2023 to June 2024<br/></h3>
+                    <h3>Software Engineering Intern (Remote) <br/></h3>
                 </p>
                 <ul>
                     <li>
@@ -231,9 +250,9 @@
             </div>
             <div>
                 <p>
-                    Eastern Nazarene College<br/>
-                    August 2022 - April 2023<br/>
-                    Teaching Assistant - Circuit Theory & Intro to C/C++<br/>
+                    <h3>Eastern Nazarene College<br/></h3>
+                    <h3>August 2022 - April 2023<br/></h3>
+                    <h3>Teaching Assistant - Circuit Theory & Intro to C/C++<br/></h3>
                 </p>
                 <ul>
                     <li>
@@ -262,7 +281,7 @@
                 <div>
                     <h2>Research and Design Project</h2>
                     <hr/>
-                    <p id="experience">Senior Design Capstone - Solar Water Distiller</p>
+                    <h3 id="experience">Senior Design Capstone - Solar Water Distiller</h3>
                     <ul>
                         <li>
                             Technologies used: AutoCAD, C++, LTspice.
@@ -284,7 +303,7 @@
                 </div>
                 <br/>
                 <div>
-                    <p id="experience">Sign Language Recognition System</p>
+                    <h3 id="experience">Sign Language Recognition System</h3>
                 <ul>
                     <li>
                         Technologies used: Python, Machine Learning, OpenCV, Google Teachable Machine, Mediapipe.
@@ -305,7 +324,7 @@
                 </div>
                 <br/>
                 <div>
-                    <p id="experience">Building my personal website</p>
+                    <h3 id="experience">Building my personal website</h3>
                     <ul>
                         <li>
                             Technologies used: HTML, CSS.
