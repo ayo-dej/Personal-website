@@ -18,11 +18,13 @@
             color:#2C3E50;
         }
         .container{
-            display: inline-flex;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
         }
 
         .header-container{
@@ -37,6 +39,7 @@
             border-radius: 50%;
             float: left;
             margin-top: 10px;
+            max-width: 100%;
         }
 
         .intro{
@@ -44,7 +47,6 @@
             max-width: 650px;
             margin-left: 20px;
             margin-bottom: 20px;
-            align-self: flex-start ;
         }
 
         .intro p .note{
@@ -67,13 +69,8 @@
             width: 35%;
             max-width: 500px;
             margin: 20px;
-            align-self: flex-start;
             text-align: justify;
             border: 3px;
-        }
-
-        .skills-container ul{
-            list-style-type: none;
         }
 
         .experience-container{
@@ -82,10 +79,6 @@
             margin: 20px;
             text-align: justify;
             border: 3px;
-        }
-
-        .experience-container ul{
-            list-style-type: none;
         }
 
         #experience{
@@ -98,10 +91,6 @@
             margin: 20px;
             text-align:justify;
             border: 3px;
-        }
-
-        .projects-container ul{
-            list-style-type: none;
         }
 
         .education-container{
@@ -118,6 +107,48 @@
         h2 {
             border-bottom: 2px solid #333;
             padding-bottom: 5px;
+        }
+
+        ul, p {
+        font-size: 16px;
+        line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column; /* Stack vertically on smaller screens */
+            text-align: center;
+        }
+
+        .intro, .about-me, .skills-container, .experience-container, .projects-container, .education-container {
+            width: 90%; 
+            margin: 10px auto; 
+        }
+
+        .skills-container, .experience-container, .projects-container {
+            text-align: left;
+        }
+
+        ul, p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+        /* Smaller phones*/
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem; 
+            }
+
+            p, ul {
+                font-size: 14px; 
+            }
+
+            .skills-container, .experience-container, .projects-container {
+                width: 90%; 
+                padding: 5%;
+            }
         }
 
     </style>
